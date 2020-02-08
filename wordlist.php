@@ -10,7 +10,7 @@ $wordlist = array(
     "auto",
     "journalist",
     "kast",
-    "bevrijdings",
+    "bevrijding",
     "beweging",
     "geensmiddel",
     "museum",
