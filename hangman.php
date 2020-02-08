@@ -1,5 +1,7 @@
 <?php
 include "wordlist.php";
-$random_listnum = array_rand($wordlist);
-echo $wordlist[$random_listnum];
+$rnd_word = array_rand($wordlist);
+echo $wordlist[$rnd_word];
+$lettercount = str_word_count($rnd_word);
+echo $lettercount;
 ?>
