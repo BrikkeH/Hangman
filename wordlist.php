@@ -12,7 +12,7 @@ $wordlist = array(
     "kast",
     "bevrijding",
     "beweging",
-    "geensmiddel",
+    "geneesmiddel",
     "museum",
     "bank",
     "slapen",
