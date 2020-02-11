@@ -8,13 +8,15 @@
     <title>Develop branch</title>
 </head>
 <body>
-        <form  id="myForm" method="post">
+        <form id="myForm" method="post">
             <input type="text" maxlength="1" id="letterinput" name="letterinput" onfocus="this.value=''" value="Enter a letter...">
-            <input type="submit" id="submitFormData" onclick="SubmitFormData()" value="Enter"/>
+            <input type="button" id="submitFormData" onclick="SubmitFormData();" value="Submit" />
         </form>
-        <div id="results"></div>
+        <div id="results">
+        </div>
         <?php
         include ('dbconn.php');
+        /*
          session_start();
         
         $query = "SELECT * FROM addletter";
@@ -62,6 +64,7 @@
     }
         echo "<br>";
         echo $attempts;
+        */
         /*
         $pageWasRefreshed = isset($_SERVER['HTTP_CACHE_CONTROL']) && $_SERVER['HTTP_CACHE_CONTROL'] === 'max-age=0';
  

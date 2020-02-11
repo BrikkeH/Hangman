@@ -1,4 +1,4 @@
 <?php
         include ('dbconn.php');
-        $_POST['letter'];
+        echo $_POST['letter'] .;
 ?>
