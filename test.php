@@ -16,7 +16,6 @@
         </div>
         <?php
         include ('dbconn.php');
-        /*
          session_start();
         
         $query = "SELECT * FROM addletter";
@@ -56,15 +55,12 @@
             }
             if($attempts >= 7){
                 print_r('END GAME');
-                $emptytable = "DELETE FROM `addletter`";
-                if($con->query($emptytable) === TRUE){
-                    echo "Table empty";
-                  }
+                
         }
     }
         echo "<br>";
         echo $attempts;
-        */
+
         /*
         $pageWasRefreshed = isset($_SERVER['HTTP_CACHE_CONTROL']) && $_SERVER['HTTP_CACHE_CONTROL'] === 'max-age=0';
  
