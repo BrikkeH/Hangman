@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hangman</title>
 </head>
 <body>
         <form action="addlettertodb.php" method = "POST">
@@ -27,7 +27,9 @@
         echo"<br>";
         print_r($array); // show all array data
         echo "<br>";
-        $word = "hello"; // the current word which is searched for
+        include "wordlist.php";
+        $rnd_word_num = array_rand($wordlist);
+        $word = $wordlist[$rnd_word_num];
         $maxattempts = 7;
         $attempts = 0;
         $char = str_split($word);
