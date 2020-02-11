@@ -27,9 +27,7 @@
         echo"<br>";
         print_r($array); // show all array data
         echo "<br>";
-        include "wordlist.php";
-        $rnd_word_num = array_rand($wordlist);
-        $word = $wordlist[$rnd_word_num];
+        $word = "hello"
         $maxattempts = 7;
         $attempts = 0;
         $char = str_split($word);
@@ -53,16 +51,6 @@
             }
             if($attempts >= 7){
                 print_r('END GAME');
-                $emptytable= mysql_query("DELETE FROM `addletter`");
-                if($emptytable !== FALSE)
-                    {
-                        echo("All rows have been deleted.");
-                    }
-                else
-                    {
-                    echo("No rows have been deleted.");
-                    }
-                }
         }
         echo "<br>";
         echo $attempts;
