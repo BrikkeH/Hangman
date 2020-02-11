@@ -51,7 +51,6 @@
             }
             else if (strpos($word, $letter) == false){
                 $attempts++;
-                echo "wrong attempt";
             }
             if($attempts >= 7){
                 print_r('END GAME');
