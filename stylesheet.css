@@ -1,4 +1,12 @@
+body{
+    margin: 0;
+    padding: 0;
+}
 h1{
-    font-size: 5em;
+    font-size: 4em;
     color: black;
+    font-family: 'Lacquer', sans-serif;
+    text-transform: uppercase;
+    vertical-align: center;
+    text-align: center;
 }
