@@ -1,6 +1,11 @@
 <?php
         include ('dbconn.php');
         echo $_POST['letter'];
-        $con->query("INSERT INTO `addletter`(`letter`) VALUES ([value-1])")
+        $newletter = $_POST['letterinput'];
+        $insert = "INSERT INTO addletter (letter) VALUES ('$newletter')";
+       
+        if($con->query($insert) === TRUE){
+            header("Location: test.php?status=letter_success");
+          }
         
 ?>
