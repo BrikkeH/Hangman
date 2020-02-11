@@ -56,6 +56,7 @@
                     echo "Table empty";
                   }
         }
+    }
         echo "<br>";
         echo $attempts;
         /*
