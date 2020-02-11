@@ -53,7 +53,16 @@
             }
             if($attempts >= 7){
                 print_r('END GAME');
-            }
+                $emptytable= mysql_query("DELETE FROM `addletter`");
+                if($emptytable !== FALSE)
+                    {
+                        echo("All rows have been deleted.");
+                    }
+                else
+                    {
+                    echo("No rows have been deleted.");
+                    }
+                }
         }
         echo "<br>";
         echo $attempts;
