@@ -51,19 +51,14 @@
             }
             if($attempts >= 7){
                 print_r('END GAME');
-                $emptytable= mysql_query("DELETE FROM `addletter`");
-                if($emptytable !== FALSE)
-                    {
-                        echo("All rows have been deleted.");
-                    }
-                else
-                    {
-                    echo("No rows have been deleted.");
-                    }
-                }
+                $emptytable = "DELETE FROM `addletter`";
+                if($con->query($emptytable) === TRUE){
+                    echo "Table empty";
+                  }
         }
         echo "<br>";
         echo $attempts;
+        /*
         $pageWasRefreshed = isset($_SERVER['HTTP_CACHE_CONTROL']) && $_SERVER['HTTP_CACHE_CONTROL'] === 'max-age=0';
  
         if($pageWasRefreshed ) {
@@ -76,7 +71,7 @@
                     {
                     echo("No rows have been deleted.");
                     }
-        }
+        }*/
         
         ?>
 </body>
