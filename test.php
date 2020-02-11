@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="http://code.jquery.com/jquery-latest.js"></script>
-<script src="js/submit.js"></script>
+    <script src="js/submit.js"></script>
     <title>Develop branch</title>
 </head>
 <body>
-        <form action="addlettertodb.php" method = "POST">
+        <form  id="myForm" method="post">
             <input type="text" maxlength="1" id="letterinput" name="letterinput" onfocus="this.value=''" value="Enter a letter...">
-            <input type="submit" onfocus="this.value=''" value="Enter"/>
+            <input type="submit" id="submitFormData" onclick="SubmitFormData();" value="Enter"/>
         </form>
         <?php
         include ('dbconn.php');
