@@ -64,7 +64,21 @@
         }
         echo "<br>";
         echo $attempts;
-
+        $pageWasRefreshed = isset($_SERVER['HTTP_CACHE_CONTROL']) && $_SERVER['HTTP_CACHE_CONTROL'] === 'max-age=0';
+ 
+        if($pageWasRefreshed ) {
+            $emptytable= mysql_query("DELETE FROM `addletter`");
+            if($emptytable !== FALSE)
+                    {
+                        echo("All rows have been deleted.");
+                    }
+                else
+                    {
+                    echo("No rows have been deleted.");
+                    }
+                }
+        }
+        
         ?>
 </body>
 </html>
