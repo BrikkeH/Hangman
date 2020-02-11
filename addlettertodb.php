@@ -4,6 +4,6 @@
 
         $insert = "INSERT INTO addletter (letter) VALUES ('$newletter')";
         if($con->query($insert) === TRUE){
-            echo "inserted";
+            header("Location: test.php?status=letter_success");
           }
 ?>
