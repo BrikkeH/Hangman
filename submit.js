@@ -1,4 +1,8 @@
 function SubmitFormData(){
     var letter = $("#letterinput").val();
-    $.post("submit.php", { letter: letter});
+    $.post("addlettertodb.php", { letter: letter}
+    ,function(data){
+        $('#results').html(data);
+	    $('#myForm')[0].reset();
+    });
 }
