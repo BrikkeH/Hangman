@@ -10,7 +10,7 @@
 <body>
         <form  id="myForm" method="post">
             <input type="text" maxlength="1" id="letterinput" name="letterinput" onfocus="this.value=''" value="Enter a letter...">
-            <input type="submit" id="submitFormData" onclick="SubmitFormData();" value="Enter"/>
+            <input type="submit" id="submitFormData" onclick="SubmitFormData()" value="Enter"/>
         </form>
         <div id="results"></div>
         <?php
