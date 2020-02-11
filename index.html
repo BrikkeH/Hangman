@@ -4,19 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="stylesheet.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Lacquer&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lacquer|Poppins&display=swap" rel="stylesheet">
     <title>Hangman</title>
 </head>
 <body>
     <h1>Hangman</h1>
     <div class="images">
-        
+        <img src="images/1.png" alt="hangman" class="activeimage"/>
     </div>
     <div class="inputpanel">
-        <form action="addletter.php" method = "POST">
+        <form action="addletter.php" method = "POST" class="forminput">
             <input type="text" maxlength="1" id="letterinput" name="letterinput" onfocus="this.value=''" value="Enter a letter...">
             <input type="submit" onfocus="this.value=''" value="Enter"/>
         </form>
+    </div>
+    <div class="mistakes">
+        <h2>Wrong letters:</h2>
+        <p></p>
     </div>
 </body>
 </html>

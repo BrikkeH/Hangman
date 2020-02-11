@@ -1,7 +1,9 @@
 body{
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
 }
+/*Title*/
 h1{
     font-size: 4em;
     color: black;
@@ -9,4 +11,37 @@ h1{
     text-transform: uppercase;
     vertical-align: center;
     text-align: center;
+}
+
+/*Images*/
+.images{
+    width: 100%;
+    height: auto;
+}
+.activeimage{
+    display:block;
+    width: 50%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Letter input*/
+.inputpanel{
+    width: 100%;
+    height: auto;
+}
+.forminput{
+    text-align: center;
+}
+input{
+    width: 200px;
+    height: 30px;
+    font-size: 1.2em;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*Mistakes*/
+.mistakes{
+    margin-left: 10%;
 }
