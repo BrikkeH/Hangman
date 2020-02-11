@@ -30,6 +30,7 @@
         include "wordlist.php";
         $rnd_word_num = array_rand($wordlist);
         $word = $wordlist[$rnd_word_num]; // the current word which is searched for
+        echo $word;
         $maxattempts = 7;
         $attempts = 0;
         $char = str_split($word);
