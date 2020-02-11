@@ -28,6 +28,9 @@
             $array[] = $row['letter'];
             }
         }
+        else {
+            echo "Didn't work";
+        }
         echo"<br>";
         print_r($array); // show all array data
         echo "<br>";
