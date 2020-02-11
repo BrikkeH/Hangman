@@ -8,7 +8,7 @@
 <body>
         <form action="addlettertodb.php" method = "POST">
             <input type="text" maxlength="1" id="letterinput" name="letterinput" onfocus="this.value=''" value="Enter a letter...">
-            <input type="submit" onfocus="this.value=''" value="Enter"/>
+            <input type="submit" value="Enter"/>
         </form>
         <?php
         include ('dbconn.php');
