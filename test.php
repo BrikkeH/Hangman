@@ -76,7 +76,6 @@
                     {
                     echo("No rows have been deleted.");
                     }
-                }
         }
         
         ?>
