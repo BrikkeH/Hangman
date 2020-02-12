@@ -79,6 +79,13 @@
             }
             if($attempts >= 7){
                 print_r('END GAME');
+                if(mysqli_query($con, $sqldel)){
+                    echo "Records were deleted successfully.";
+                } else{
+                    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+                }
+                session_destroy();
+                exit;
         }
     }
         echo "<br>";
