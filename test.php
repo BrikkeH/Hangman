@@ -56,7 +56,6 @@
             $word=$_SESSION["woord"];
         }
         echo $word;
-        $maxattempts = 7;
         $attempts = 0;
         $char = str_split($word);
 
