@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="jquery-3.4.1.min.js"></script>
-    <script src="random.js"></script>
     <title>Develop</title>
 </head>
 <body>
@@ -20,10 +18,10 @@
         </script>
         <?php
         include ('dbconn.php');
-         session_start();
-        
+        session_start();
         $lettercorrect = 0;
         $query = "SELECT * FROM addletter";
+        $sqldel = "DELETE FROM `addletter`";
         $array = array();
 
         if ($result = $con->query($query)) {
@@ -37,29 +35,17 @@
         print_r($array); // show all array data
         include "wordlist.php";
         echo "<br>";
-/*
-            $rnd_word_num = array_rand($wordlist);
-            $rnd_word = $wordlist[$rnd_word_num];
-            echo $rnd_word;
-        $_SESSION["woord"] = $rnd_word;
-*/
         if(isset($_POST['reset']))
-        {
+        {  
+            if(mysqli_query($con, $sqldel)){
+                echo "Records were deleted successfully.";
+            } else{
+                echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+            }
             session_destroy();
             exit;
-            session_start();
-            $rand= rand(0,count($wordlist)-1);
-            $word=$wordlist[$rand];
-            $_SESSION["woord"] = $word;
-            $sqldel = "DELETE FROM `addletter`";
-
-            if ($conn->query($sqldel) === TRUE) {
-                echo "Record deleted successfully";
-            } else {
-                echo "Error deleting record: " . $conn->error;
-            }
-            $attempts = 0;
         }
+
         if(!isset($_SESSION['woord']))
         {
             $rand= rand(0,count($wordlist)-1);
