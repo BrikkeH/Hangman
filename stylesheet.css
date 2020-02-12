@@ -58,3 +58,25 @@ input{
 .mistakes{
     margin-left: 10%;
 }
+
+/* Loser page */
+.losingpage{
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+.losingpage h1{
+    font-size: 100px;
+    vertical-align: center;
+    margin-top: 15%;
+}
+button{
+    padding: 30px 100px;
+    font-size: 30px;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    position: relative;
+    transform: translate(-200px, 0px);
+    font-family: 'poppins';
+}
