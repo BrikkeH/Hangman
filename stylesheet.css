@@ -17,13 +17,26 @@ h1{
 .images{
     width: 100%;
     height: auto;
+    position: relative;
+    overflow: hidden;
+    float:center;
 }
-.activeimage{
+.images img{
     display:block;
     width: 50%;
     height: auto;
     margin-left: auto;
     margin-right: auto;
+}
+.images :not(.activeimage){
+    display: block;
+    position: absolute;
+    visibility: hidden;
+}
+.activeimage{
+    position: relative;
+    z-index: 1;
+    visibility: visible;
 }
 
 /*Letter input*/
