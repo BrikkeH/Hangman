@@ -3,17 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hangman</title>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="random.js"></script>
+    <title>Develop</title>
 </head>
 <body>
         <form action="addlettertodb.php" method = "POST">
             <input type="text" maxlength="1" id="letterinput" name="letterinput" onfocus="this.value=''" value="Enter a letter...">
-            <input type="submit" onfocus="this.value=''" value="Enter"/>
+            <input name="enter" type="submit" value="Enter"/>
         </form>
+        <form action="" method = "POST">
+            <input name="reset" type="submit" value="reset" />
+        </form>
+        
+
+        </script>
         <?php
         include ('dbconn.php');
          session_start();
         
+        $lettercorrect = 0;
         $query = "SELECT * FROM addletter";
         $array = array();
 
@@ -26,8 +35,41 @@
         }
         echo"<br>";
         print_r($array); // show all array data
+        include "wordlist.php";
         echo "<br>";
-        $word = "hello"
+/*
+            $rnd_word_num = array_rand($wordlist);
+            $rnd_word = $wordlist[$rnd_word_num];
+            echo $rnd_word;
+        $_SESSION["woord"] = $rnd_word;
+*/
+        if(isset($_POST['reset']))
+        {
+            session_destroy();
+            exit;
+            session_start();
+            $rand= rand(0,count($wordlist)-1);
+            $word=$wordlist[$rand];
+            $_SESSION["woord"] = $word;
+            $sqldel = "DELETE FROM `addletter`";
+
+            if ($conn->query($sqldel) === TRUE) {
+                echo "Record deleted successfully";
+            } else {
+                echo "Error deleting record: " . $conn->error;
+            }
+            $attempts = 0;
+        }
+        if(!isset($_SESSION['woord']))
+        {
+            $rand= rand(0,count($wordlist)-1);
+            $word=$wordlist[$rand];
+            $_SESSION["woord"] = $word;
+        }
+        else{
+            $word=$_SESSION["woord"];
+        }
+        echo $word;
         $maxattempts = 7;
         $attempts = 0;
         $char = str_split($word);
@@ -52,9 +94,9 @@
             if($attempts >= 7){
                 print_r('END GAME');
         }
+    }
         echo "<br>";
         echo $attempts;
-
         ?>
 </body>
 </html>
