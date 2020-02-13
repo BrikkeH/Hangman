@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="stylesheet.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Lacquer|Poppins&display=swap" rel="stylesheet">
-    <title>You lose</title>
+    <title>You loose</title>
 </head>
-<body style="background-color: orange">
+<body style="background-color: palegoldenrod">
     <div class="losingpage">
         <h1>Unfortunately, you lose. </h1>
         <img src="images/lose.png" alt="hangmanlose"/>
