@@ -101,3 +101,15 @@ button{
     transform: translate(-200px, 0px);
     font-family: 'poppins';
 }
+
+/* Win page */
+.winpage{
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+.winpage h1{
+    font-size: 100px;
+    vertical-align: center;
+    margin-top: 15%;
+}

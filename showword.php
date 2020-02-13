@@ -25,12 +25,17 @@
             $word=$_SESSION["woord"];
         }
         $attempts = 0;
+        $correct = 0;
+        $wordlength = strlen($word);
         $char = str_split($word);
+        echo $correct;
+        echo $wordlength;
 
         //PRINT WOORD UIT MET SPATIES OF JUIST GERADE LETTERS
         foreach(str_split($word) as $char) {
             if (in_array($char, $array, true)) {
                 print_r(' ' .$char);
+                $correct++;
             } 
             else if (!in_array($char, $array, true)) {
                 echo ' _ ';
@@ -53,6 +58,18 @@
                 }
                 session_destroy();
                 exit;
-        }
+            }
+            if((int)$correct == (int)$wordlength)
+            {
+                print_r('YOU WIN');
+                if(mysqli_query($con, $sqldel)){
+                    echo "Records were deleted successfully.";
+                    header("Location: playagainwin.php");
+                } else{
+                    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+                }
+                session_destroy();
+                exit;
+            }
     }
 ?>
