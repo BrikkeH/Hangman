@@ -10,7 +10,9 @@
 <body style="background-color: orange">
     <div class="losingpage">
         <h1>Unfortunately, you lose. </h1>
-        <button>PLAY AGAIN</button>
+        <a href="index.php">
+            <button>PLAY AGAIN</button>
+        </a>
     </div>
 </body>
 </html>

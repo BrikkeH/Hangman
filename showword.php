@@ -47,6 +47,7 @@
                 print_r('END GAME');
                 if(mysqli_query($con, $sqldel)){
                     echo "Records were deleted successfully.";
+                    header("Location: playagain.php");
                 } else{
                     echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
                 }
