@@ -5,12 +5,13 @@ body{
 }
 /*Title*/
 h1{
-    font-size: 4em;
+    font-size: 3em;
     color: black;
     font-family: 'Lacquer', sans-serif;
     text-transform: uppercase;
     vertical-align: center;
     text-align: center;
+    top: 0;
 }
 
 /*Images*/
@@ -43,6 +44,7 @@ h1{
 .inputpanel{
     width: 100%;
     height: auto;
+    margin-bottom: 10px;
 }
 .forminput{
     text-align: center;
@@ -56,7 +58,26 @@ input{
 
 /*Mistakes*/
 .mistakes{
-    margin-left: 10%;
+    display:flex;
+    height: 70px;
+    line-height: 70px;
+}
+.column1{
+    flex: 40%;
+    vertical-align: middle;
+    text-align: right;
+    margin-top: -20px;
+}
+.column2{
+    flex: 57%;
+    font-size: 1.5em;
+    padding-left: 3%;
+}
+
+/* Show word with letter or _ */
+.wordpanel{
+    text-align: center;
+    font-size: 3em;
 }
 
 /* Loser page */
