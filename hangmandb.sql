@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 13 feb 2020 om 16:28
+-- Gegenereerd op: 13 feb 2020 om 16:44
 -- Serverversie: 10.4.11-MariaDB
 -- PHP-versie: 7.4.1
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `addletter` (
-  `letter` text NOT NULL
+  `letter` varchar(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 COMMIT;
 
