@@ -10,14 +10,8 @@
 <body>
     <h1>Hangman</h1>
     <div class="images">
-        <img src="images/1.png" alt="hangman" class="activeimage"/>
-        <img src="images/2.png" alt="hangman"/>
-        <img src="images/3.png" alt="hangman"/>
-        <img src="images/4.png" alt="hangman"/>
-        <img src="images/5.png" alt="hangman"/>
-        <img src="images/6.png" alt="hangman"/>
-        <img src="images/7.png" alt="hangman"/>
-        <img src="images/8.png" alt="hangman"/>
+        <?php include ('imageupdate.php');?>
+        <img src="<?php echo $image; ?>" alt="hangman" class="activeimage"/>
     </div>
     <div class="wordpanel">
         <?php include ('showword.php');?>
