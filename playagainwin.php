@@ -10,6 +10,7 @@
 <body style="background-color: palegreen">
     <div class="winpage">
         <h1>Congratulations, you win!</h1>
+        img src="images/win.png" alt="hangmanwin"/>
         <a href="index.php">
             <button>PLAY AGAIN</button>
         </a>
