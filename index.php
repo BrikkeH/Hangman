@@ -36,9 +36,5 @@
                 <?php include ('showwrongletters.php')?>
             </div>
     </div>
-
-    <form action="" method = "POST">
-            <input name="reset" type="submit" value="reset" />
-    </form>
 </body>
 </html>
