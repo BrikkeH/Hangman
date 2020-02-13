@@ -1,7 +1,10 @@
 <?php
         include ('dbconn.php');
         include "wordlist.php";
-        session_start();
+        if(!isset($_SESSION)) 
+        { 
+            session_start(); 
+        } 
         $query = "SELECT * FROM addletter";
         $sqldel = "DELETE FROM `addletter`";
         $array = array();
@@ -25,6 +28,7 @@
             $word=$_SESSION["woord"];
         }
         $attempts = 0;
+
         $correct = 0;
         $wordlength = strlen($word);
         $char = str_split($word);
