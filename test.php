@@ -27,7 +27,7 @@
         echo"<br>";
         print_r($array); // show all array data
         echo "<br>";
-        $word = "hello"
+        $word = "hello";
         $maxattempts = 7;
         $attempts = 0;
         $char = str_split($word);
