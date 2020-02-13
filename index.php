@@ -19,7 +19,7 @@
     <div class="inputpanel">
         <form action="addlettertodb.php" method = "POST" class="forminput">
             <input type="text" maxlength="1" id="letterinput" name="letterinput" onfocus="this.value=''" required pattern="\S+.*">
-            <input name="enter" type="submit" value="Enter"/>
+            <input name="enter" type="submit" value="Enter" class="inputbutton"/>
         </form>
     </div>
     <div class="mistakes">
