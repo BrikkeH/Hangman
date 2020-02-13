@@ -28,8 +28,6 @@
         $correct = 0;
         $wordlength = strlen($word);
         $char = str_split($word);
-        echo $correct;
-        echo $wordlength;
 
         //PRINT WOORD UIT MET SPATIES OF JUIST GERADE LETTERS
         foreach(str_split($word) as $char) {
