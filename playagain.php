@@ -10,6 +10,9 @@
 <body style="background-color: orange">
     <div class="losingpage">
         <h1>Unfortunately, you lose. </h1>
+        <div class="images">
+        <img src="images/8.png" alt="hangman" class="activeimage"/>
+        </div>
         <a href="index.php">
             <button>PLAY AGAIN</button>
         </a>
